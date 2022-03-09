@@ -33,8 +33,8 @@ public class BookstoreApplication {
 			rrepository.save(category3);
 			
 			log.info("save a couple of books");
-			repository.save(new Book("Pride and Prejudice", "Jane Austen", 1813, "9780679783268", 12.99));
-            repository.save(new Book("No Longer Human", "Osamu Dazai", 1973, "9780811204811", 12.99));
+			repository.save(new Book("Pride and Prejudice", "Jane Austen", 1813, "9780679783268", 12.99, category2));
+            repository.save(new Book("No Longer Human", "Osamu Dazai", 1973, "9780811204811", 12.99, category3));
 			
 			log.info("fetch all books");
 			for (Book book : repository.findAll()) {
